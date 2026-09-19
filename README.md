@@ -190,7 +190,7 @@ Evidence: `evidence/autopsy-notes.md`
 - `notes/commands.txt` — command reference for revision/interview preparation
 
 📄 Report
-[View the Cybersecurity Assessment Lab Report (PDF)](report/your-file-name.pdf)
+[View the Cybersecurity Assessment Lab Report (PDF)](report//Cybersecurity_Assessment_Lab_Report.pdf)
 
 🎯 Learning Outcome
 This project demonstrates a complete beginner-to-intermediate assessment workflow: identify exposed services, examine web technologies, review scanner findings, inspect network traffic, perform basic filesystem forensics, and document evidence with security-focused recommendations.
