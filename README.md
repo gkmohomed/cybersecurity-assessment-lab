@@ -126,7 +126,7 @@ Assessment: Greenbone reported unsafe input handling that may allow XSS and comm
 Remediation: Upgrade to TWiki 4.2.4 or later, according to the vendor-fix recommendation reported by the scanner.
 Evidence: `evidence/openvas-findings.md`
 ![OpenVAS assessment results](screenshots/09-openvas-assessment-results.png.png)
-![OpenVAS assessment results](screenshots/09-openvas-assessment-results.png.png)
+![OpenVAS assessment results](screenshots/09-openvas-status.png)
 ![OpenVAS task completed](screenshots//10-openvas-task-completed.png.png)
 ![OpenVAS dRuby finding](screenshots/11-openvas-critical-druby1.png)
 ![OpenVAS dRuby detection details](screenshots/11-openvas-critical-druby2.png)
