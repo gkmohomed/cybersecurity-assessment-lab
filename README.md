@@ -42,6 +42,7 @@ Evidence: `evidence/nmap-service-scan.txt`
 ![Lab network](screenshots/01-lab-network1.png)
 ![Nmap service scan](screenshots/02-nmap-service-scan.png)
 ---
+
 2. 🌐 HTTP Enumeration & Header Analysis
 Nmap HTTP scripts were used to identify web page titles and response headers:
 ```bash
@@ -61,6 +62,7 @@ Evidence:
 Example observation
 The port 80 response exposed server and PHP version information. This is useful during reconnaissance because it helps an assessor understand the technologies exposed by the target.
 ---
+
 3. 🛡️ OWASP ZAP Web Security Assessment
 An automated OWASP ZAP assessment was performed against:
 `http://192.168.216.132`
@@ -90,6 +92,7 @@ Evidence: `evidence/zap-findings.md`
 ![ZAP CSP finding](screenshots/07-zap-csp-analysis.png)
 ![ZAP HttpOnly finding](screenshots/08-zap-httponly-analysis.png)
 ---
+
 4. 🚨 Greenbone/OpenVAS Vulnerability Assessment
 A fresh Greenbone/OpenVAS assessment was created specifically for this portfolio project.
 Task: `Metasploitable 2 - Full Vulnerability Assessment`
@@ -134,6 +137,7 @@ Evidence: `evidence/openvas-findings.md`
 ![OpenVAS TWiki finding](screenshots/13-openvas-critical-twiki.png)
 > **Important:** Scanner findings were documented as scanner results. No exploitation of the reported Critical vulnerabilities was required for this project.
 ---
+
 5. 📡 Wireshark Traffic Analysis
 Traffic was captured on Kali while communicating with the Metasploitable 2 VM.
 The capture demonstrated:
@@ -149,6 +153,7 @@ Evidence: `evidence/wireshark-notes.md`
 ![Wireshark TCP handshake](screenshots/17-wireshark-tcp-handshake.png)
 ![Wireshark ICMP traffic](screenshots/18-wireshark-icmp.png)
 ---
+
 6. 🔎 Autopsy Digital Forensics
 A fresh Autopsy case was created for the Metasploitable 2 VMDK.
 The approximately 1.9 GB VMDK contained:
@@ -167,6 +172,7 @@ Evidence: `evidence/autopsy-notes.md`
 ![Autopsy deleted files](screenshots/21-autopsy-deleted-files.png)
 ![Autopsy boot file contents](screenshots/22-autopsy-boot-file-contents.png)
 ---
+
 🧠 Key Skills Demonstrated
 Network reconnaissance with Nmap
 HTTP enumeration and security-header analysis
@@ -176,6 +182,7 @@ Packet analysis with Wireshark
 Linux filesystem and metadata analysis with Autopsy
 Evidence collection and technical documentation
 Risk interpretation and remediation recommendations
+
 📁 Repository Contents
 `report/` — final technical assessment report
 `screenshots/` — visual evidence captured during the lab
@@ -183,7 +190,9 @@ Risk interpretation and remediation recommendations
 `notes/commands.txt` — command reference for revision/interview preparation
 📄 Report
 View the Cybersecurity Assessment Lab Report (PDF)
+
 🎯 Learning Outcome
 This project demonstrates a complete beginner-to-intermediate assessment workflow: identify exposed services, examine web technologies, review scanner findings, inspect network traffic, perform basic filesystem forensics, and document evidence with security-focused recommendations.
+
 ⚠️ Portfolio Disclaimer
 This project was performed in an isolated, intentionally vulnerable VMware laboratory environment for educational purposes. The IP addresses and security findings documented here belong to the private lab environment and are not claims about public or third-party systems.
