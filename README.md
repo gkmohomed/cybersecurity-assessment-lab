@@ -116,41 +116,53 @@ ZAP generated **25 alerts**. Three representative findings were selected for dee
 ![ZAP HttpOnly finding](screenshots/08-zap-httponly-analysis.png)
 
 
-4. 🚨 Greenbone/OpenVAS Vulnerability Assessment
-A fresh Greenbone/OpenVAS assessment was created specifically for this portfolio project.
-Task: `Metasploitable 2 - Full Vulnerability Assessment`
-Severity summary
-Severity	Count
-Critical	13
-High	11
-Medium	40
-Low	6
-Log	90
-Displayed results	160
+## 4. 🚨 Greenbone/OpenVAS Vulnerability Assessment
+
+A fresh Greenbone/OpenVAS assessment was created specifically for this portfolio project.  
+**Task:** `Metasploitable 2 - Full Vulnerability Assessment`
+
+### Severity summary
+
+| Severity | Count |
+| :--- | ---: |
+| **Critical** | 13 |
+| **High** | 11 |
+| **Medium** | 40 |
+| **Low** | 6 |
+| **Log** | 90 |
+| **Displayed results** | **160** |
+
 Three Critical findings were selected for detailed review.
-4.1 Distributed Ruby (dRuby/DRb) Multiple RCE Vulnerabilities
-Severity: 10.0 — Critical
-QoD: 99%
-Location: `8787/tcp`
-OID: `1.3.6.1.4.1.25623.1.0.108010`
-Assessment: Greenbone detected a potentially dangerous remote command-execution condition associated with the exposed DRb service.
-Remediation direction: Restrict or disable unnecessary DRb exposure and apply appropriate security controls and trusted-host access restrictions.
-4.2 Possible Backdoor: Ingreslock
-Severity: 10.0 — Critical
-QoD: 99%
-Location: `1524/tcp`
-OID: `1.3.6.1.4.1.25623.1.0.103549`
-Detection observation: Greenbone's detection test received `uid=0(root) gid=0(root)` from the service.
-Remediation: Greenbone recommends a complete cleanup of the affected system.
-4.3 TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
-Severity: 10.0 — Critical
-QoD: 80%
-Location: `80/tcp`
-OID: `1.3.6.1.4.1.25623.1.0.800320`
-CVEs reported: `CVE-2008-5304`, `CVE-2008-5305`
-Assessment: Greenbone reported unsafe input handling that may allow XSS and command/code execution in affected TWiki versions.
-Remediation: Upgrade to TWiki 4.2.4 or later, according to the vendor-fix recommendation reported by the scanner.
-Evidence: `evidence/openvas-findings.md`
+
+### 4.1 Distributed Ruby (dRuby/DRb) Multiple RCE Vulnerabilities
+
+- **Severity:** 10.0 — Critical
+- **QoD:** 99%
+- **Location:** `8787/tcp`
+- **OID:** `1.3.6.1.4.1.25623.1.0.108010`
+- **Assessment:** Greenbone detected a potentially dangerous remote command-execution condition associated with the exposed DRb service.
+- **Remediation direction:** Restrict or disable unnecessary DRb exposure and apply appropriate security controls and trusted-host access restrictions.
+
+### 4.2 Possible Backdoor: Ingreslock
+
+- **Severity:** 10.0 — Critical
+- **QoD:** 99%
+- **Location:** `1524/tcp`
+- **OID:** `1.3.6.1.4.1.25623.1.0.103549`
+- **Detection observation:** Greenbone's detection test received `uid=0(root) gid=0(root)` from the service.
+- **Remediation:** Greenbone recommends a complete cleanup of the affected system.
+
+### 4.3 TWiki < 4.2.4 Multiple XSS / Command Execution Vulnerabilities
+
+- **Severity:** 10.0 — Critical
+- **QoD:** 80%
+- **Location:** `80/tcp`
+- **OID:** `1.3.6.1.4.1.25623.1.0.800320`
+- **CVEs reported:** `CVE-2008-5304`, `CVE-2008-5305`
+- **Assessment:** Greenbone reported unsafe input handling that may allow XSS and command/code execution in affected TWiki versions.
+- **Remediation:** Upgrade to TWiki 4.2.4 or later, according to the vendor-fix recommendation reported by the scanner.
+
+**Evidence:** [`evidence/openvas-findings.md`](evidence/openvas-findings.md)
 ![OpenVAS assessment results](screenshots/09-openvas-assessment-results.png.png)
 ![OpenVAS assessment results](screenshots/09-openvas-status.png)
 ![OpenVAS task completed](screenshots//10-openvas-task-completed.png.png)
