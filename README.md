@@ -194,24 +194,29 @@ The HTTP exchange was directly visible at the application layer because the test
 ![Wireshark TCP handshake](screenshots/17-wireshark-tcp-handshake.png)
 ![Wireshark ICMP traffic](screenshots/18-wireshark-icmp.png)
 
-6. 🔎 Autopsy Digital Forensics
-A fresh Autopsy case was created for the Metasploitable 2 VMDK.
-The approximately 1.9 GB VMDK contained:
-A Linux `ext` partition (`63` → `481949` sectors)
-A Linux LVM partition (`482013` → `16771859` sectors)
+## 6. 🔎 Autopsy Digital Forensics
+
+A fresh Autopsy case was created for the **Metasploitable 2 VMDK**.  
+The approximately **1.9 GB VMDK** contained:
+- A Linux `ext` partition (`63` → `481949` sectors)
+- A Linux LVM partition (`482013` → `16771859` sectors)
+
 Autopsy was used to inspect the `ext` filesystem and its metadata, including:
-filesystem directory/file entries
-modified, access and change timestamps
-UID/GID ownership information
-boot-related files
-deleted filesystem entries
-The deleted-file view identified entries including GRUB backup/temporary files and older kernel-related files. These were treated as forensic artifacts, not automatically as malicious activity.
-Evidence: `evidence/autopsy-notes.md`
+- Filesystem directory/file entries
+- Modified, access, and change timestamps
+- UID/GID ownership information
+- Boot-related files
+- Deleted filesystem entries
+
+The deleted-file view identified entries including GRUB backup/temporary files and older kernel-related files. These were treated as **forensic artifacts**, not automatically as malicious activity.
+
+**Evidence:** [`evidence/autopsy-notes.md`](evidence/autopsy-notes.md)
+
 ![Autopsy volume analysis](screenshots/19-autopsy-volume-analysis.png)
 ![Autopsy filesystem analysis](screenshots/20-autopsy-filesystem-analysis.png)
 ![Autopsy deleted files](screenshots/21-autopsy-deleted-files.png)
 ![Autopsy boot file contents](screenshots/22-autopsy-boot-file-contents.png)
----
+
 
 🧠 Key Skills Demonstrated
 - Network reconnaissance with Nmap
