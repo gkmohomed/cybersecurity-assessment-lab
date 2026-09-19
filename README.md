@@ -173,21 +173,26 @@ Three Critical findings were selected for detailed review.
 > **Important:** Scanner findings were documented as scanner results. No exploitation of the reported Critical vulnerabilities was required for this project.
 ---
 
-5. 📡 Wireshark Traffic Analysis
-Traffic was captured on Kali while communicating with the Metasploitable 2 VM.
+## 5. 📡 Wireshark Traffic Analysis
+
+Traffic was captured on Kali while communicating with the **Metasploitable 2 VM**.  
 The capture demonstrated:
-ARP — local IPv4-to-MAC address resolution
-ICMP — echo request/reply traffic
-TCP — three-way handshake: `SYN → SYN/ACK → ACK`
-HTTP — `GET / HTTP/1.1` followed by `HTTP/1.1 200 OK`
-Security observation
+
+- **ARP** — local IPv4-to-MAC address resolution
+- **ICMP** — echo request/reply traffic
+- **TCP** — three-way handshake: `SYN → SYN/ACK → ACK`
+- **HTTP** — `GET / HTTP/1.1` followed by `HTTP/1.1 200 OK`
+
+### Security observation
+
 The HTTP exchange was directly visible at the application layer because the test service used unencrypted HTTP on TCP port 80. For systems carrying sensitive information, HTTPS/TLS should be used to protect data in transit.
-Evidence: `evidence/wireshark-notes.md`
+
+**Evidence:** [`evidence/wireshark-notes.md`](evidence/wireshark-notes.md)
+
 ![Wireshark overview](screenshots/15-wireshark-overview.png)
 ![Wireshark HTTP traffic](screenshots/16-wireshark-http.png)
 ![Wireshark TCP handshake](screenshots/17-wireshark-tcp-handshake.png)
 ![Wireshark ICMP traffic](screenshots/18-wireshark-icmp.png)
----
 
 6. 🔎 Autopsy Digital Forensics
 A fresh Autopsy case was created for the Metasploitable 2 VMDK.
