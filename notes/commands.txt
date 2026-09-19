@@ -1,1 +1,40 @@
+CYBERSECURITY ASSESSMENT LAB - KEY COMMANDS
 
+# Lab network
+ip address
+ifconfig
+
+# Nmap service discovery
+nmap -sV 192.168.216.132
+nmap -sV 192.168.216.132 -oN ~/evidence/nmap-service-scan.txt
+
+# HTTP enumeration
+nmap -p 80,8180 --script http-title,http-headers 192.168.216.132
+nmap -p 80,8180 --script http-title,http-headers 192.168.216.132 -oN ~/evidence/http-enumeration.txt
+
+# HTTP headers
+curl -I http://192.168.216.132
+curl -I http://192.168.216.132:8180
+
+# Save both header checks
+{
+  echo "=== HTTP :80 ==="
+  curl -I http://192.168.216.132
+  echo
+  echo "=== HTTP :8180 ==="
+  curl -I http://192.168.216.132:8180
+} | tee ~/evidence/http-header-check.txt
+
+# OpenVAS / Greenbone
+sudo gvm-check-setup
+sudo systemctl status ospd-openvas --no-pager
+sudo systemctl status gvmd --no-pager
+
+# Wireshark traffic generation
+ping -c 4 192.168.216.132
+curl http://192.168.216.132
+
+# Useful Wireshark display filters
+http
+tcp
+icmp
