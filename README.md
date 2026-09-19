@@ -53,25 +53,32 @@ The scan identified **23 open TCP services**, including FTP, SSH, Telnet, DNS, H
 ![Nmap service scan](screenshots/02-nmap-service-scan.png)
 
 
-2. 🌐 HTTP Enumeration & Header Analysis
+## 2. 🌐 HTTP Enumeration & Header Analysis
+
 Nmap HTTP scripts were used to identify web page titles and response headers:
+
 ```bash
 nmap -p 80,8180 --script http-title,http-headers 192.168.216.132
 ```
+
 Additional header checks were performed with:
+
 ```bash
 curl -I http://192.168.216.132
 curl -I http://192.168.216.132:8180
 ```
-The assessment identified technology/version information exposed through HTTP responses, including Apache, PHP and Apache-Coyote/Tomcat details.
-Evidence:
-`evidence/http-enumeration.txt`
-`evidence/http-header-check.txt`
+
+The assessment identified technology/version information exposed through HTTP responses, including **Apache**, **PHP**, and **Apache-Coyote/Tomcat** details.
+
+
+
 ![HTTP enumeration](screenshots/03-http-enumeration.png)
 ![HTTP header analysis](screenshots/04-http-header-analysis.png)
-Example observation
+
+### Example observation
+
 The port 80 response exposed server and PHP version information. This is useful during reconnaissance because it helps an assessor understand the technologies exposed by the target.
----
+
 
 3. 🛡️ OWASP ZAP Web Security Assessment
 An automated OWASP ZAP assessment was performed against:
