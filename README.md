@@ -49,8 +49,6 @@ The scan identified **23 open TCP services**, including FTP, SSH, Telnet, DNS, H
 - `3306/tcp` — MySQL `5.0.51a`
 - `5432/tcp` — PostgreSQL `8.3.x`
 
-**Evidence:** [`evidence/nmap-service-scan.txt`](evidence/nmap-service-scan.txt)
-
 ![Lab network](screenshots/01-lab-network1.png)
 ![Nmap service scan](screenshots/02-nmap-service-scan.png)
 
