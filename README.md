@@ -188,7 +188,8 @@ Screenshots are stored in `screenshots/` and are intended to be displayed direct
 Suggested evidence naming:
 
 ```text
-01-lab-network.png
+01-lab-network1.png
+01-lab-network2.png
 02-nmap-service-scan.png
 03-http-enumeration.png
 04-http-header-analysis.png
@@ -197,6 +198,7 @@ Suggested evidence naming:
 07-zap-csp-analysis.png
 08-zap-httponly-analysis.png
 09-openvas-assessment-results.png
+09-openvas-status.png
 10-openvas-task-completed.png
 11-openvas-critical-druby1.png
 11-openvas-critical-druby2.png
@@ -206,7 +208,7 @@ Suggested evidence naming:
 16-wireshark-http.png
 17-wireshark-tcp-handshake.png
 18-wireshark-icmp.png
-19-autopsy-volume-details.png
+19-autopsy-volume-analysis.png
 20-autopsy-filesystem-analysis.png
 21-autopsy-deleted-files.png
 22-autopsy-boot-file-contents.png
