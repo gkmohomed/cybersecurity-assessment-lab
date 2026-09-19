@@ -174,25 +174,27 @@ Evidence: `evidence/autopsy-notes.md`
 ---
 
 🧠 Key Skills Demonstrated
-Network reconnaissance with Nmap
-HTTP enumeration and security-header analysis
-Web application assessment with OWASP ZAP
-Vulnerability assessment with Greenbone/OpenVAS
-Packet analysis with Wireshark
-Linux filesystem and metadata analysis with Autopsy
-Evidence collection and technical documentation
-Risk interpretation and remediation recommendations
+- Network reconnaissance with Nmap
+- HTTP enumeration and security-header analysis
+- Web application assessment with OWASP ZAP
+- Vulnerability assessment with Greenbone/OpenVAS
+- Packet analysis with Wireshark
+- Linux filesystem and metadata analysis with Autopsy
+- Evidence collection and technical documentation
+- Risk interpretation and remediation recommendations
 
 📁 Repository Contents
-`report/` — final technical assessment report
-`screenshots/` — visual evidence captured during the lab
-`evidence/` — supporting findings and analysis notes
-`notes/commands.txt` — command reference for revision/interview preparation
+- `report/` — final technical assessment report
+- `screenshots/` — visual evidence captured during the lab
+- `evidence/` — supporting findings and analysis notes
+- `notes/commands.txt` — command reference for revision/interview preparation
+
 📄 Report
-View the Cybersecurity Assessment Lab Report (PDF)
+[View the Cybersecurity Assessment Lab Report (PDF)](report/your-file-name.pdf)
 
 🎯 Learning Outcome
 This project demonstrates a complete beginner-to-intermediate assessment workflow: identify exposed services, examine web technologies, review scanner findings, inspect network traffic, perform basic filesystem forensics, and document evidence with security-focused recommendations.
 
-⚠️ Portfolio Disclaimer
-This project was performed in an isolated, intentionally vulnerable VMware laboratory environment for educational purposes. The IP addresses and security findings documented here belong to the private lab environment and are not claims about public or third-party systems.
+> [!WARNING]
+> **Portfolio Disclaimer**
+> This project was performed in an isolated, intentionally vulnerable VMware laboratory environment for educational purposes. The IP addresses and security findings documented here belong to the private lab environment and are not claims about public or third-party systems.
