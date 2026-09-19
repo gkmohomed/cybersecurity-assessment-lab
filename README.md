@@ -2,11 +2,16 @@ Cybersecurity Assessment Lab
 A hands-on cybersecurity assessment and digital forensics lab performed against an intentionally vulnerable Metasploitable 2 virtual machine in an isolated VMware environment.
 The project covers the full assessment workflow from reconnaissance → web assessment → vulnerability management → packet analysis → digital forensics → reporting.
 > **Authorization & Scope:** All testing was performed against the user's own Metasploitable 2 lab host at `192.168.216.132`. No public or third-party systems were tested.
+
 🔎 Lab Environment
-Component	Role	Address / Notes
-Kali Linux	Assessment and analysis workstation	`192.168.216.131`
-Metasploitable 2	Intentionally vulnerable target	`192.168.216.132`
-VMware	Isolated virtualization lab	Private `192.168.216.0/24` network
+
+| Component | Role | Address / Notes |
+| :--- | :--- | :--- |
+| **Kali Linux** | Assessment and analysis workstation | `192.168.216.131` |
+| **Metasploitable 2** | Intentionally vulnerable target | `192.168.216.132` |
+| **VMware** | Isolated virtualization lab | Private `192.168.216.0/24` network |
+
+
 🧭 Assessment Workflow
 ```text
 Lab setup
