@@ -80,35 +80,41 @@ The assessment identified technology/version information exposed through HTTP re
 The port 80 response exposed server and PHP version information. This is useful during reconnaissance because it helps an assessor understand the technologies exposed by the target.
 
 
-3. 🛡️ OWASP ZAP Web Security Assessment
-An automated OWASP ZAP assessment was performed against:
-`http://192.168.216.132`
-ZAP generated 25 alerts. Three representative findings were selected for deeper analysis. The alerts were not treated as automatically confirmed vulnerabilities; risk and confidence reported by ZAP were retained in the analysis.
-Finding 1 — Absence of Anti-CSRF Tokens
-Risk: Medium
-Confidence: Low
-CWE: 352
-Observation: ZAP did not identify a recognized anti-CSRF token in the reported HTML form.
-Recommendation: Implement robust, validated CSRF protection for state-changing forms.
-Finding 2 — Content Security Policy (CSP) Header Not Set
-Risk: Medium
-Confidence: High
-CWE: 693
-Observation: ZAP reported that the identified page did not set a `Content-Security-Policy` response header.
-Recommendation: Configure the web/server stack to return an appropriate CSP policy.
-Finding 3 — Cookie No HttpOnly Flag
-Risk: Low
-Confidence: Medium
-Parameter: `PHPSESSID`
-CWE: 1004
-Observation: ZAP reported that the `PHPSESSID` cookie was set without the `HttpOnly` attribute.
-Recommendation: Set `HttpOnly` on session cookies when client-side JavaScript access is not required.
-Evidence: `evidence/zap-findings.md`
+## 3. 🛡️ OWASP ZAP Web Security Assessment
+
+An automated OWASP ZAP assessment was performed against: `http://192.168.216.132`
+
+ZAP generated **25 alerts**. Three representative findings were selected for deeper analysis. The alerts were not treated as automatically confirmed vulnerabilities; risk and confidence reported by ZAP were retained in the analysis.
+
+### Finding 1 — Absence of Anti-CSRF Tokens
+- **Risk:** Medium
+- **Confidence:** Low
+- **CWE:** 352
+- **Observation:** ZAP did not identify a recognized anti-CSRF token in the reported HTML form.
+- **Recommendation:** Implement robust, validated CSRF protection for state-changing forms.
+
+### Finding 2 — Content Security Policy (CSP) Header Not Set
+- **Risk:** Medium
+- **Confidence:** High
+- **CWE:** 693
+- **Observation:** ZAP reported that the identified page did not set a `Content-Security-Policy` response header.
+- **Recommendation:** Configure the web/server stack to return an appropriate CSP policy.
+
+### Finding 3 — Cookie No HttpOnly Flag
+- **Risk:** Low
+- **Confidence:** Medium
+- **Parameter:** `PHPSESSID`
+- **CWE:** 1004
+- **Observation:** ZAP reported that the `PHPSESSID` cookie was set without the `HttpOnly` attribute.
+- **Recommendation:** Set `HttpOnly` on session cookies when client-side JavaScript access is not required.
+
+**Evidence:** [`evidence/zap-findings.md`](evidence/zap-findings.md)
+
 ![OWASP ZAP scan results](screenshots/05-zap-scan-results.png)
 ![ZAP CSRF finding](screenshots/06-zap-csrf-analysis.png)
 ![ZAP CSP finding](screenshots/07-zap-csp-analysis.png)
 ![ZAP HttpOnly finding](screenshots/08-zap-httponly-analysis.png)
----
+
 
 4. 🚨 Greenbone/OpenVAS Vulnerability Assessment
 A fresh Greenbone/OpenVAS assessment was created specifically for this portfolio project.
