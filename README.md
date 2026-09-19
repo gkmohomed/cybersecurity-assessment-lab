@@ -31,22 +31,29 @@ Autopsy digital forensics
 Findings, risk interpretation & remediation
 ```
 ---
-1. 🔍 Nmap Reconnaissance
+## 1. 🔍 Nmap Reconnaissance
+
 A service/version scan was performed against the authorized target:
+
 ```bash
 nmap -sV 192.168.216.132
 ```
-The scan identified 23 open TCP services, including FTP, SSH, Telnet, DNS, HTTP, SMB, MySQL, PostgreSQL, VNC, IRC and Tomcat.
-Key observations
-`80/tcp` — Apache HTTP Server `2.2.8` with PHP `5.2.4`
-`1524/tcp` — bindshell service identified by Nmap
-`8180/tcp` — Apache Tomcat `5.5`
-`3306/tcp` — MySQL `5.0.51a`
-`5432/tcp` — PostgreSQL `8.3.x`
-Evidence: `evidence/nmap-service-scan.txt`
+
+The scan identified **23 open TCP services**, including FTP, SSH, Telnet, DNS, HTTP, SMB, MySQL, PostgreSQL, VNC, IRC and Tomcat.
+
+### Key observations
+
+- `80/tcp` — Apache HTTP Server `2.2.8` with PHP `5.2.4`
+- `1524/tcp` — bindshell service identified by Nmap
+- `8180/tcp` — Apache Tomcat `5.5`
+- `3306/tcp` — MySQL `5.0.51a`
+- `5432/tcp` — PostgreSQL `8.3.x`
+
+**Evidence:** [`evidence/nmap-service-scan.txt`](evidence/nmap-service-scan.txt)
+
 ![Lab network](screenshots/01-lab-network1.png)
 ![Nmap service scan](screenshots/02-nmap-service-scan.png)
----
+
 
 2. 🌐 HTTP Enumeration & Header Analysis
 Nmap HTTP scripts were used to identify web page titles and response headers:
